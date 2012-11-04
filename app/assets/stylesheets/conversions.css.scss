@@ -1,0 +1,29 @@
+// Place all the styles related to the Conversions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.text_field {
+  width: 600px !important;
+}
+
+#conversion_description {
+  width: 600px !important;
+  height: 95px !important;
+}
+
+table {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+h1, h2, h3 {
+  margin-left: .5em;
+}
+
+.breadcrumb {
+  margin-right: 15px;
+}
+
+#convert_new_file {
+  margin-left: 1em;
+}

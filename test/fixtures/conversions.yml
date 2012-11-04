@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  author: MyString
+  csv_file: MyString
+  formatted_xml: MyText
+
+two:
+  author: MyString
+  csv_file: MyString
+  formatted_xml: MyText

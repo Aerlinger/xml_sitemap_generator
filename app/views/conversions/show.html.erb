@@ -1,0 +1,41 @@
+<%- model_class = Conversion -%>
+<h3>Conversion Data for <%= @conversion.clean_xml_filename %></h3>
+
+<div class="form-actions">
+
+
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              conversions_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_conversion_path(@conversion), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              conversion_path(@conversion),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
+
+
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:author) %>:</strong></dt>
+  <dd><%= @conversion.author %></dd>
+
+  <dt><strong>Description:</strong></dt>
+  <dd><div class="breadcrumb"><%= @conversion.description %></div></dd>
+
+  <dt><strong>Original File:</strong></dt>
+  <dd><%= link_to @conversion.csv_file, @conversion.csv_file.to_s %></dd>
+
+  <dt><strong>XML Filename:</strong></dt>
+  <dd><%= link_to @conversion.formatted_xml_filename, @conversion.formatted_xml_filename %></dd>
+
+  <dt><br></dt>
+  <dd><br></dd>
+
+  <dt><strong>File preview:</strong></dt>
+  <dd><pre class="prettyprint linenums" style="margin-right: 30px"><%= @conversion.formatted_xml_data %></pre></dd>
+
+</dl>
+
+
